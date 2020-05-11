@@ -3,8 +3,7 @@ import styled from 'styled-components/macro'
 
 import { GameStateProvider } from './gameState/gameStateProvider'
 import GlobalStyles from './styles/GlobalStyles'
-import Track from './components/Track'
-import PlayField from './components/PlayField'
+import { Track, PlayField, DeckTable } from './components'
 import { color } from './styles/styleVariables'
 
 export default function App() {
@@ -18,6 +17,7 @@ export default function App() {
           </Header>
           <Track />
           <PlayField />
+          <DeckTable />
         </GameStateProvider>
       </Main>
     </>
