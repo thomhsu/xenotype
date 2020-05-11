@@ -2,9 +2,8 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import { useGameState } from '../../gameState/gameStateProvider'
-import SurvivorDeck from './SurvivorDeck'
+import PlayerDeck from './PlayerDeck'
 import ShipDeck from './ShipDeck'
-import AlienDeck from './AlienDeck'
 import { color } from '../../styles/styleVariables'
 
 export default function DeckTable() {
@@ -12,17 +11,15 @@ export default function DeckTable() {
 
   return (
     <Container>
-      <SurvivorDeck />
+      <PlayerDeck player={'survivors'} />
       <ShipDeck />
-      <AlienDeck />
+      <PlayerDeck player={'aliens'} />
     </Container>
   )
 }
 
 const Container = styled.div`
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
   width: 100%;
   height: 100%;
 `

@@ -1,5 +1,5 @@
 export const initialGameState = {
-  currentPlayer: 'alien',
+  currentPlayer: 'aliens',
   trackPosition: 10,
   playFieldItems: []
 }

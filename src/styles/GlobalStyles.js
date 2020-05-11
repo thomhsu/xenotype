@@ -15,16 +15,21 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
 
     h1 {
-      font-size: 1.5rem;
+      font-size: 2.5rem;
       font-weight: 500;
     }
 
     h2 {
-      font-size: 1.125rem;
+      font-size: 2rem;
       font-weight: 500;
     }
 
     h3 {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    h4 {
       font-size: 1rem;
       font-weight: 500;
     }

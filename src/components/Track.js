@@ -13,7 +13,7 @@ export default function Track() {
 
   return (
     <Container>
-      <HeaderSpacer><h2>survivor</h2></HeaderSpacer>
+      <HeaderSpacer align='right' ><h4>survivors</h4></HeaderSpacer>
       {
         trackArr.map((space, i) => {
           return (
@@ -25,7 +25,7 @@ export default function Track() {
           )
         })
       }
-      <HeaderSpacer><h2>alien</h2></HeaderSpacer>
+      <HeaderSpacer align='left' ><h4>aliens</h4></HeaderSpacer>
     </Container>
   )
 }
@@ -37,13 +37,14 @@ const Container = styled.div`
   width: 100%;
   background-color: white;
   padding: 1rem;
-  h2 {
+  h4 {
     margin: 0 1rem;
   }
 `
 
 const HeaderSpacer = styled.div`
   width: 8rem;
+  text-align: ${props => props.align};
 `
 
 const Space = styled.div`
