@@ -13,7 +13,7 @@ export default function Track() {
 
   return (
     <Container>
-      <h2>survivor</h2>
+      <HeaderSpacer><h2>survivor</h2></HeaderSpacer>
       {
         trackArr.map((space, i) => {
           return (
@@ -25,7 +25,7 @@ export default function Track() {
           )
         })
       }
-      <h2>alien</h2>
+      <HeaderSpacer><h2>alien</h2></HeaderSpacer>
     </Container>
   )
 }
@@ -40,6 +40,10 @@ const Container = styled.div`
   h2 {
     margin: 0 1rem;
   }
+`
+
+const HeaderSpacer = styled.div`
+  width: 8rem;
 `
 
 const Space = styled.div`

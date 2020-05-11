@@ -4,6 +4,7 @@ import styled from 'styled-components/macro'
 import { GameStateProvider } from './gameState/gameStateProvider'
 import GlobalStyles from './styles/GlobalStyles'
 import Track from './components/Track'
+import PlayField from './components/PlayField'
 import { color } from './styles/styleVariables'
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
             <h1>Untitled Card Game</h1>
           </Header>
           <Track />
+          <PlayField />
         </GameStateProvider>
       </Main>
     </>
