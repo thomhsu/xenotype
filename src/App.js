@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import styled from 'styled-components'
 
-function App() {
+import GlobalStyles from './styles/GlobalStyles'
+import { color } from './styles/styleVariables'
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <GlobalStyles />
+      <Main>
+        <Header>
+          <h1>Untitled Card Game</h1>
+        </Header>
+      </Main>
+    </>
+  )
 }
 
-export default App;
+const Main = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: ${color.background};
+`
+
+const Header = styled.header`
+  display: flex;
+  width: 100vw;
+  height: 4em;
+  justify-content: center;
+  align-items: center;
+  color: ${color.background};
+  background-color: black;
+`
