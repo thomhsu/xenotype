@@ -1,6 +1,6 @@
 export const initialGameState = {
   currentPlayer: 'alien',
-
+  trackPosition: 10
 }
 
 export const gameStateReducer = (state, action) => {

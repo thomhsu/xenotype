@@ -1,8 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
-import { GameStateProvider } from './gameState'
+import { GameStateProvider } from './gameState/gameStateProvider'
 import GlobalStyles from './styles/GlobalStyles'
+import Track from './components/Track'
 import { color } from './styles/styleVariables'
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
           <Header>
             <h1>Untitled Card Game</h1>
           </Header>
+          <Track />
         </GameStateProvider>
       </Main>
     </>
@@ -22,7 +24,7 @@ export default function App() {
 
 const Main = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
   background-color: ${color.background};
