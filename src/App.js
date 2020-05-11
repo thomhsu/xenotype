@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { GameStateProvider } from './gameState'
 import GlobalStyles from './styles/GlobalStyles'
 import { color } from './styles/styleVariables'
 
@@ -9,9 +10,11 @@ export default function App() {
     <>
       <GlobalStyles />
       <Main>
-        <Header>
-          <h1>Untitled Card Game</h1>
-        </Header>
+        <GameStateProvider>
+          <Header>
+            <h1>Untitled Card Game</h1>
+          </Header>
+        </GameStateProvider>
       </Main>
     </>
   )
