@@ -51,7 +51,7 @@ const HeaderSpacer = styled.div`
 const Space = styled.div`
   height: 2rem;
   width: 2rem;
-  border: ${props => props.center ? '3px solid blue' : '1px solid navy'};
-  background-color: ${props => props.active ? 'grey' : 'initial'};
+  border: ${props => props.center ? '5px solid blue' : '1px solid navy'};
+  background-color: ${props => props.active ? 'blue' : 'initial'};
   margin: 0.25rem;
 `

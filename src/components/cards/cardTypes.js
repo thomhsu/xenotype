@@ -19,7 +19,87 @@ export const survivorCards = [
     description: 'Add 3 to defense',
     requirement: [{scrap: 1}],
     baseQty: 3
+  },
+  {
+    type: 'defense',
+    name: 'Scrap',
+    description: 'Flotsam...',
+    requirement: [{scrap: 1}],
+    baseQty: 3
   }
+]
+
+export const alienCards = [
+  {
+    type: 'instant',
+    name: 'Biomass',
+    description: 'Gooey...',
+    requirement: [{ap: 2}],
+    baseQty: 3
+  },
+  {
+    type: 'instant',
+    name: 'Biomass',
+    description: 'Gooey...',
+    requirement: [{ap: 2}],
+    baseQty: 3
+  },
+  {
+    type: 'instant',
+    name: 'Biomass',
+    description: 'Gooey...',
+    requirement: [{ap: 2}],
+    baseQty: 3
+  },
+  {
+    type: 'instant',
+    name: 'Biomass',
+    description: 'Gooey...',
+    requirement: [{ap: 2}],
+    baseQty: 3
+  },
+  {
+    type: 'instant',
+    name: 'Biomass',
+    description: 'Gooey...',
+    requirement: [{ap: 2}],
+    baseQty: 3
+  },
+  {
+    type: 'instant',
+    name: 'Biomass',
+    description: 'Gooey...',
+    requirement: [{ap: 2}],
+    baseQty: 3
+  },
+  {
+    type: 'instant',
+    name: 'Biomass',
+    description: 'Gooey...',
+    requirement: [{ap: 2}],
+    baseQty: 3
+  },
+  {
+    type: 'instant',
+    name: 'Attack!',
+    description: 'Attack with any cards you have in play',
+    requirement: [{ap: 2}],
+    baseQty: 3
+  },
+  {
+    type: 'instant',
+    name: 'Attack!',
+    description: 'Attack with any cards you have in play',
+    requirement: [{ap: 2}],
+    baseQty: 3
+  },
+  {
+    type: 'instant',
+    name: 'Attack!',
+    description: 'Attack with any cards you have in play',
+    requirement: [{ap: 2}],
+    baseQty: 3
+  },
 ]
 
 export const shipCards = [
@@ -31,7 +111,7 @@ export const shipCards = [
 ]
 
 export const cardTypes = [
-  'instant',
-  'offense',
-  'defense'
+  'resource',
+  'action',
+  'deployable'
 ]

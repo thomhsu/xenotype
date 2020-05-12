@@ -16,28 +16,27 @@ const GlobalStyles = createGlobalStyle`
 
     h1 {
       font-size: 2.5rem;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     h2 {
       font-size: 2rem;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     h3 {
       font-size: 1.5rem;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     h4 {
       font-size: 1rem;
-      font-weight: 500;
+      font-weight: 600;
     }
 
-    a {
+    p {
       font-size: 1rem;
-      font-weight: 500;
-      text-decoration: none;
+      font-weight: 400;
     }
 
     strong {

@@ -1,7 +1,13 @@
 export const initialGameState = {
   currentPlayer: 'aliens',
   trackPosition: 10,
-  playFieldItems: []
+  playFieldItems: [],
+  resources: {
+    survivorScrap: 0,
+    survivorAP: 0,
+    alienBiomass: 0,
+    alienAP: 3
+  }
 }
 
 export const gameStateReducer = (state, action) => {

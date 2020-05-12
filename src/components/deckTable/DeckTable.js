@@ -11,9 +11,9 @@ export default function DeckTable() {
 
   return (
     <Container>
-      <PlayerDeck player={'survivors'} />
+      <PlayerDeck player='survivors' />
       <ShipDeck />
-      <PlayerDeck player={'aliens'} />
+      <PlayerDeck player='aliens' />
     </Container>
   )
 }

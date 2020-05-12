@@ -1,30 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 
-import { useGameState } from '../gameState/gameStateProvider'
-import { color } from '../styles/styleVariables'
-
-export default function PlayField() {
-  const [state, dispatch] = useGameState()
+export default function Card({ card }) {
+  const [ active, setActive ] = useState(false)
 
   return (
-    <Container>
-      {!state.playFieldItems.length && 'Nothing in play'}
+    <Container onClick={() => setActive(!active)} active={active} >
+      <h4>{card.name}</h4>
+      <p>{card.description}</p>
     </Container>
   )
 }
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 8rem;
-  border: 1px dotted black;
+  width: 8rem;
+  height: 12rem;
+  border: 1px solid black;
+  border-radius: 4px;
   background-color: white;
   padding: 1rem;
-  h2 {
-    margin: 0 1rem;
-  }
+  margin: 0.25rem;
+  position: relative;
+  bottom: ${props => props.active ? '1rem' : '0'};
+  box-shadow: ${props => props.active ? '0.15em 0.15em 0.5em grey' : 'none'};
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 `
-
