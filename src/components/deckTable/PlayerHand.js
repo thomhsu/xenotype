@@ -8,12 +8,12 @@ import { color } from '../../styles/styleVariables'
 export default function PlayerDeck({ player }) {
   const [state, dispatch] = useGameState()
 
-  const hand = player === 'survivors' ? survivorCards : alienCards
+  const hand = player === 'survivors' ? state.playerDeck.survivors : state.playerDeck.aliens
 
   return (
     <Container>
       {
-        hand.map((card, i) => {
+        hand && hand.map((card, i) => {
           return (
             <Card card={card} key={card.name + i} />
           )

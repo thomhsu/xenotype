@@ -7,6 +7,7 @@ import { Track, DeckTable } from './components'
 import { color } from './styles/styleVariables'
 
 export default function App() {
+
   return (
     <>
       <GlobalStyles />
