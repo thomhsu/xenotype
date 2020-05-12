@@ -13,7 +13,7 @@ export default function App() {
       <Main>
         <GameStateProvider>
           <Header>
-            <h1>Untitled Card Game</h1>
+            <h1>Xenotype</h1>
           </Header>
           <Track />
           <PlayField />
