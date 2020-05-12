@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 
 import { GameStateProvider } from './gameState/gameStateProvider'
 import GlobalStyles from './styles/GlobalStyles'
-import { Track, PlayField, DeckTable } from './components'
+import { Track, DeckTable } from './components'
 import { color } from './styles/styleVariables'
 
 export default function App() {
@@ -16,7 +16,6 @@ export default function App() {
             <h1>Xenotype</h1>
           </Header>
           <Track />
-          <PlayField />
           <DeckTable />
         </GameStateProvider>
       </Main>
@@ -29,7 +28,6 @@ const Main = styled.div`
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background-color: ${color.background};
 `
 
 const Header = styled.header`

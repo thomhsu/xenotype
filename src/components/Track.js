@@ -37,6 +37,7 @@ const Container = styled.div`
   width: 100%;
   background-color: white;
   padding: 1rem;
+  margin: 1rem 0;
   h4 {
     margin: 0 1rem;
   }
