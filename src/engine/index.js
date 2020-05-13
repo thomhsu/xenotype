@@ -1,1 +1,2 @@
-export { default as AlientTurn } from './AlienTurn'
+export { default as AlienTurn } from './AlienTurn'
+export * from './actions'

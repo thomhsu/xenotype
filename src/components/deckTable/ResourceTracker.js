@@ -10,15 +10,15 @@ export default function ResourceTracker({ player }) {
   if (player === 'survivors') {
     return (
       <Container>
-        <p>AP: {`${state.resources.survivorAP}`}</p>
-        <p>Scrap: {`${state.resources.survivorScrap}`}</p>
+        <p>AP: {`${state.ap.survivors}`}</p>
+        <p>Scrap: {`${state.resources.survivors}`}</p>
       </Container>
     )
   } else if (player === 'aliens') {
     return (
       <Container>
-        <p>AP: {`${state.resources.alienAP}`}</p>
-        <p>Biomass: {`${state.resources.alienBiomass}`}</p>
+        <p>AP: {`${state.ap.aliens}`}</p>
+        <p>Biomass: {`${state.resources.aliens}`}</p>
       </Container>
     )
   }

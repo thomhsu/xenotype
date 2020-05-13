@@ -6,3 +6,19 @@ export const shuffle = (array) => {
     array[j] = temp
   }
 }
+
+export const loopDelay = (func, times, timeout = 500) => {
+  let i = 0
+
+  function loop() {
+    setTimeout(function() {
+      func()
+      i++
+      if (i < times) {
+        loop()
+      }
+    }, timeout)
+  }
+
+  loop()
+}

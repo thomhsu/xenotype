@@ -1,12 +1,23 @@
 import React, { useEffect } from 'react'
 
 import { useGameState } from '../gameState/gameStateProvider'
+import { resetAP } from './actions'
+import { loopDelay, shuffle } from '../utils'
 
 export default function App() {
   const [ state, dispatch ] = useGameState()
 
   useEffect(() => {
-    dispatch({ type: 'RESET_ALIEN_AP' })
+    resetAP(dispatch, 'aliens', 4)
+
+    // (function drawHand() {
+    //   const drawOne = () => {
+
+    //   }
+
+    //   loopDelay()
+    // })()
+
   }, [dispatch])
 
   return null

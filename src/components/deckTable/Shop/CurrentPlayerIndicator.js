@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 
 import { useGameState } from '../../../gameState/gameStateProvider'
+import { setPlayer } from '../../../engine'
 import { color } from '../../../styles/styleVariables'
 
 export default function CurrentPlayerIndicator() {
@@ -12,10 +13,7 @@ export default function CurrentPlayerIndicator() {
     setFadingOut(true)
 
     setTimeout(() => {
-      dispatch({
-        type: 'SET_PLAYER',
-        currentPlayer: 'aliens'
-      })
+      setPlayer(dispatch, 'aliens')
     }, 500)
   }
 
