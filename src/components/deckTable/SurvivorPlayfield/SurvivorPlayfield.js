@@ -4,27 +4,28 @@ import styled from 'styled-components/macro'
 import { useGameState } from '../../../gameState/gameStateProvider'
 import ResourceTracker from '../ResourceTracker'
 import PlayerHand from '../PlayerHand'
+import { Drawpile, Discardpile } from '../../cards'
+import { PlayfieldContainer } from '../sharedStyles'
 import { color } from '../../../styles/styleVariables'
 
 export default function SurvivorPlayfield() {
   const [state, dispatch] = useGameState()
 
   return (
-    <Container activeTurn={state.currentPlayer === 'survivors'} >
-      <h2>Survivors</h2>
-      <ResourceTracker player={'survivors'} />
-      <PlayerHand player={'survivors'} />
-    </Container>
+    <PlayfieldContainer activeTurn={state.currentPlayer === 'survivors'} >
+      <div>
+        <h2>Survivors</h2>
+        <ResourceTracker player={'survivors'} />
+      </div>
+      {/* <PlayerHand player={'survivors'} /> */}
+      <DrawDiscardContainer>
+        <Drawpile player='survivors' />
+        <Discardpile player='survivors' />
+      </DrawDiscardContainer>
+    </PlayfieldContainer>
   )
 }
 
-const Container = styled.div`
+const DrawDiscardContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  opacity: ${props => props.activeTurn ? '1' : '0.3'};
-  background-color: ${props => props.activeTurn ? 'honeydew' : 'slategrey'};
-  padding: 1rem;
 `
