@@ -1,19 +1,19 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-import { useGameState } from '../../gameState/gameStateProvider'
-import ResourceTracker from './ResourceTracker'
-import PlayerHand from './PlayerHand'
-import { color } from '../../styles/styleVariables'
+import { useGameState } from '../../../gameState/gameStateProvider'
+import ResourceTracker from '../ResourceTracker'
+import PlayerHand from '../PlayerHand'
+import { color } from '../../../styles/styleVariables'
 
-export default function PlayerDeck({ player }) {
+export default function AlienPlayfield() {
   const [state, dispatch] = useGameState()
 
   return (
-    <Container activeTurn={state.currentPlayer === player} >
-      <h2>{player}</h2>
-      <ResourceTracker player={player} />
-      <PlayerHand player={player} />
+    <Container activeTurn={state.currentPlayer === 'aliens'} >
+      <h2>Aliens</h2>
+      <ResourceTracker player={'aliens'} />
+      <PlayerHand player={'aliens'} />
     </Container>
   )
 }
@@ -28,4 +28,3 @@ const Container = styled.div`
   background-color: ${props => props.activeTurn ? 'honeydew' : 'slategrey'};
   padding: 1rem;
 `
-

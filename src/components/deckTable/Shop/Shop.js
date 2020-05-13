@@ -1,17 +1,17 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-import { useGameState } from '../../gameState/gameStateProvider'
+import { useGameState } from '../../../gameState/gameStateProvider'
 import CurrentPlayerIndicator from './CurrentPlayerIndicator'
-import { color } from '../../styles/styleVariables'
+import { color } from '../../../styles/styleVariables'
 
-export default function ShipDeck() {
+export default function Shop() {
   const [state, dispatch] = useGameState()
 
   return (
     <Container>
       <CurrentPlayerIndicator />
-      <h3>Ship Deck</h3>
+      <h3>Shop</h3>
     </Container>
   )
 }

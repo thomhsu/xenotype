@@ -2,9 +2,11 @@ import React, { useEffect } from 'react'
 import styled from 'styled-components/macro'
 
 import { useGameState } from '../../gameState/gameStateProvider'
-import PlayerDeck from './PlayerDeck'
-import ShipDeck from './ShipDeck'
+import { SurvivorPlayfield } from './SurvivorPlayfield'
+import { AlienPlayfield } from './AlienPlayfield'
+import { Shop } from './Shop'
 import { survivorCards, alienCards } from '../cards'
+import { shuffle } from '../../utils'
 import { color } from '../../styles/styleVariables'
 
 export default function DeckTable() {
@@ -18,14 +20,14 @@ export default function DeckTable() {
       function addCards(factionCards, factionCardBucket) {
         for (let card in factionCards) {
           const copies = factionCards[card].baseQty
-          for (let i = 0; i < copies; i++) {
-            factionCardBucket.push(factionCards[card])
-          }
+          Array(copies).fill().forEach(() => factionCardBucket.push(factionCards[card]))
         }
       }
 
       addCards(survivorCards, survivorStartingCards)
       addCards(alienCards, alienStartingCards)
+      shuffle(survivorStartingCards)
+      shuffle(alienStartingCards)
 
       dispatch({
         type: 'CREATE_STARTING_DECK',
@@ -38,9 +40,9 @@ export default function DeckTable() {
 
   return (
     <Container>
-      <PlayerDeck player='survivors' />
-      <ShipDeck />
-      <PlayerDeck player='aliens' />
+      <SurvivorPlayfield />
+      <Shop />
+      <AlienPlayfield />
     </Container>
   )
 }
@@ -50,4 +52,3 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
 `
-

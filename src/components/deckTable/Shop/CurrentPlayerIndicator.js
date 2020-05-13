@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-import { useGameState } from '../../gameState/gameStateProvider'
-import { color } from '../../styles/styleVariables'
+import { useGameState } from '../../../gameState/gameStateProvider'
+import { color } from '../../../styles/styleVariables'
 
 export default function CurrentPlayerIndicator() {
   const [state, dispatch] = useGameState()

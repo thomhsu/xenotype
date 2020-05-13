@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 import { useGameState } from '../../gameState/gameStateProvider'
-import { Card, survivorCards, alienCards } from '../cards'
+import { Card } from '../cards'
 import { color } from '../../styles/styleVariables'
 
 export default function PlayerDeck({ player }) {
