@@ -33,7 +33,16 @@ export const gameStateReducer = (state, action) => {
     case 'RESET_AP':
       return {...state, ap: { ...state.ap, [action.faction]: action.amount }}
     case 'UPDATE_DISCARD':
-      return {...state, resources: { ...state.resources, alienAP: 4 }}
+      return {...state, playerDiscard: { ...state.playerDiscard, [action.faction]: action.newDiscard }}
+    case 'UPDATE_DRAW':
+      return {...state, playerDraw: { ...state.playerDraw, [action.faction]: action.newDraw }}
+    case 'UPDATE_HAND':
+      return {
+        ...state,
+        playerHand: {
+          ...state.playerHand,
+          [action.faction]: state.playerHand[action.faction].concat(action.newCard)
+        }}
     default:
       return state
   }

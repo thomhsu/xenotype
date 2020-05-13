@@ -35,9 +35,31 @@ export const resetAP = (dispatch, faction, amount) => {
 }
 
 export const drawOne = (state, dispatch, faction) => {
+  let drawnCard
+
   if (!state.playerDeck[faction].length) {
-    const discardPile = state.playerDiscard[faction]
-    shuffle(discardPile)
-    
+    const shuffledDiscard = shuffle([...state.playerDiscard[faction]])
+    drawnCard = shuffledDiscard.pop()
+    updateDiscard(dispatch, faction, [])
+    updateDraw(dispatch, faction, shuffledDiscard)
+    addToHand(dispatch, faction, drawnCard)
+    return
   }
+
+  const updatedDraw = [...state.playerDraw[faction]]
+  drawnCard = updateDraw.pop()
+  updateDraw(dispatch, faction, updatedDraw)
+  addToHand(dispatch, faction, drawnCard)
+}
+
+const updateDiscard = (dispatch, faction, newDiscard) => {
+  dispatch({ type: 'UPDATE_DISCARD', faction, newDiscard })
+}
+
+const updateDraw = (dispatch, faction, newDraw) => {
+  dispatch({ type: 'UPDATE_DRAW', faction, newDraw })
+}
+
+const addToHand = (dispatch, faction, newCard) => {
+  dispatch({ type: 'UPDATE_HAND', faction, newCard })
 }
