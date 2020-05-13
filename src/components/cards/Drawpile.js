@@ -28,8 +28,8 @@ const Container = styled.div`
 
 const Deck = styled(CardTemplate)`
   justify-content: center;
-  background-color: ${props => props.player === 'survivors' ? 'darkseagreen' : 'black'};
-  color: ${props => props.player === 'survivors' ? 'black' : 'white'};
+  background-color: ${props => props.player === 'survivors' ? 'darkolivegreen' : 'black'};
+  color: white;
   h3 {
     position: relative;
     bottom: 2rem;

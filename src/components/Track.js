@@ -36,8 +36,8 @@ const Container = styled.div`
   align-items: center;
   width: 100%;
   background-color: white;
-  padding: 1rem;
-  margin: 1rem 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid black;
   h4 {
     margin: 0 1rem;
   }
@@ -53,6 +53,6 @@ const Space = styled.div`
   width: 2rem;
   box-shadow: ${props => props.center ? '0 0 0 3px black' : '0 0 0 2px black'};
   border-radius: 4px;
-  background-color: ${props => props.active ? 'crimson' : 'lightgrey'};
+  background-color: ${props => props.active ? 'rgb(140,40,46)' : 'lightgrey'};
   margin: 0.25rem;
 `

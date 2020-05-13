@@ -1,2 +1,1 @@
-export { default as Track } from './Track'
-export { DeckTable } from './DeckTable'
+export { default as Main } from './Main'

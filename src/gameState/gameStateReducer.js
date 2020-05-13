@@ -1,13 +1,16 @@
 export const initialGameState = {
   currentPlayer: null,
-  // currentPlayer: 'aliens',
+  // currentPlayer: 'survivors',
   trackPosition: 10,
-  playFieldItems: [],
   resources: {
     survivorScrap: 0,
     survivorAP: 0,
     alienBiomass: 0,
-    alienAP: 3
+    alienAP: 0
+  },
+  playerHand: {
+    survivors: [],
+    aliens: []
   },
   playerDeck: {
     survivors: [],
@@ -23,8 +26,10 @@ export const gameStateReducer = (state, action) => {
   switch (action.type) {
     case 'CREATE_STARTING_DECK':
       return {...state, playerDeck: {...action.startingDecks} }
-    case 'START_GAME':
+    case 'SET_PLAYER':
       return {...state, currentPlayer: action.currentPlayer}
+    case 'RESET_ALIEN_AP':
+      return {...state, resources: { ...state.resources, alienAP: 4 }}
     default:
       return state
   }

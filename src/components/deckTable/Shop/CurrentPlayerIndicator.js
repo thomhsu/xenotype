@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 
 import { useGameState } from '../../../gameState/gameStateProvider'
@@ -6,17 +6,22 @@ import { color } from '../../../styles/styleVariables'
 
 export default function CurrentPlayerIndicator() {
   const [state, dispatch] = useGameState()
+  const [ fadingOut, setFadingOut ] = useState(false)
 
   const startGame = () => {
-    dispatch({
-      type: 'START_GAME',
-      currentPlayer: 'aliens'
-    })
+    setFadingOut(true)
+
+    setTimeout(() => {
+      dispatch({
+        type: 'SET_PLAYER',
+        currentPlayer: 'aliens'
+      })
+    }, 500)
   }
 
   if (!state.currentPlayer) {
     return (
-      <StartContainer>
+      <StartContainer fadingOut={fadingOut} >
         <h2>Are you ready?</h2>
         <button onClick={startGame} >Start</button>
       </StartContainer>
@@ -50,6 +55,10 @@ const StartContainer = styled.div`
   flex-direction: column;
   align-items: center;
   text-shadow: 0.15em 0.15em 0.5em grey;
+  opacity: ${props => props.fadingOut ? '0' : '1'};
+  transition: opacity 0.5s ease-out;
+  margin-top: 1rem;
+  text-align: center;
   button {
     width: 100px;
     font-size: 1.5rem;
@@ -58,7 +67,7 @@ const StartContainer = styled.div`
     font-family: courier;
     border: 1px solid black;
     cursor: pointer;
-    text-shadow: 0.15em 0.15em 0.5em grey;
+    box-shadow: 0.15em 0.15em 0.5em grey;
   }
 `
 

@@ -26,8 +26,8 @@ export default function ResourceTracker({ player }) {
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 12rem;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem;
 `

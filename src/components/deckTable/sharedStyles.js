@@ -8,6 +8,8 @@ export const PlayfieldContainer = styled.div`
   width: 100%;
   height: 100%;
   opacity: ${props => props.activeTurn ? '1' : '0.3'};
-  background-color: ${props => props.activeTurn ? 'honeydew' : 'slategrey'};
+  transition: opacity 0.2s ease-in-out;
+  background-color: ${props => props.activeTurn ? 'white' : 'slategrey'};
   padding: 1rem;
+  text-align: center;
 `
