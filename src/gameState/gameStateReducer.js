@@ -34,8 +34,14 @@ export const gameStateReducer = (state, action) => {
       return {...state, ap: { ...state.ap, [action.faction]: action.amount }}
     case 'UPDATE_DISCARD':
       return {...state, playerDiscard: { ...state.playerDiscard, [action.faction]: action.newDiscard }}
-    case 'UPDATE_DRAW':
-      return {...state, playerDraw: { ...state.playerDraw, [action.faction]: action.newDraw }}
+    case 'UPDATE_DECK':
+      return {
+        ...state,
+        playerDeck: {
+          ...state.playerDeck,
+          [action.faction]: action.newDeck
+        }
+      }
     case 'UPDATE_HAND':
       return {
         ...state,

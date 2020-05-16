@@ -35,14 +35,14 @@ export const alienCards = {
     name: 'Biomass',
     description: 'Gooey...',
     requirement: {ap: 2},
-    baseQty: 3
+    baseQty: 8
   },
   attack: {
     type: 'instant',
     name: 'Attack!',
     description: 'Attack with any cards you have in play',
     requirement: {ap: 2},
-    baseQty: 3
+    baseQty: 8
   }
 }
 

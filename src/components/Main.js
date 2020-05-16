@@ -13,7 +13,8 @@ export default function Main() {
 
   useEffect(() => {
     createStartingDeck(dispatch)
-  }, [dispatch])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <>

@@ -8,7 +8,7 @@ import { color } from '../../styles/styleVariables'
 export default function PlayerDeck({ player }) {
   const [state, dispatch] = useGameState()
 
-  const hand = player === 'survivors' ? state.playerDeck.survivors : state.playerDeck.aliens
+  const hand = state.playerHand[player]
 
   return (
     <Container>

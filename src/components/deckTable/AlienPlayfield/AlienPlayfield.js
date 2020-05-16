@@ -17,7 +17,7 @@ export default function AlienPlayfield() {
         <h2>Aliens</h2>
         <ResourceTracker player='aliens' />
       </div>
-      {/* <PlayerHand player='aliens' /> */}
+      <PlayerHand player='aliens' />
       <DrawDiscardContainer>
         <Discardpile player='aliens' />
         <Drawpile player='aliens' />

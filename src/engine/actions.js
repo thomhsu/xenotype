@@ -41,14 +41,14 @@ export const drawOne = (state, dispatch, faction) => {
     const shuffledDiscard = shuffle([...state.playerDiscard[faction]])
     drawnCard = shuffledDiscard.pop()
     updateDiscard(dispatch, faction, [])
-    updateDraw(dispatch, faction, shuffledDiscard)
+    updateDeck(dispatch, faction, shuffledDiscard)
     addToHand(dispatch, faction, drawnCard)
     return
   }
 
-  const updatedDraw = [...state.playerDraw[faction]]
-  drawnCard = updateDraw.pop()
-  updateDraw(dispatch, faction, updatedDraw)
+  const updatedDeck = [...state.playerDeck[faction]]
+  drawnCard = updatedDeck.pop()
+  updateDeck(dispatch, faction, updatedDeck)
   addToHand(dispatch, faction, drawnCard)
 }
 
@@ -56,8 +56,8 @@ const updateDiscard = (dispatch, faction, newDiscard) => {
   dispatch({ type: 'UPDATE_DISCARD', faction, newDiscard })
 }
 
-const updateDraw = (dispatch, faction, newDraw) => {
-  dispatch({ type: 'UPDATE_DRAW', faction, newDraw })
+const updateDeck = (dispatch, faction, newDeck) => {
+  dispatch({ type: 'UPDATE_DECK', faction, newDeck })
 }
 
 const addToHand = (dispatch, faction, newCard) => {
