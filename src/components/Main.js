@@ -4,7 +4,7 @@ import styled from 'styled-components/macro'
 import { useGameState } from '../gameState/gameStateProvider'
 import { AlienTurn, createStartingDeck } from '../engine'
 import Track from './Track'
-import { DeckTable } from './DeckTable'
+import { DeckTable } from './deckTable'
 import bloodSpatterImg from '../assets/blood-splatter.png'
 import { color } from '../styles/styleVariables'
 
